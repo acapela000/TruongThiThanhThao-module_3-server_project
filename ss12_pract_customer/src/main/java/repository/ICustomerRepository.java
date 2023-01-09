@@ -10,6 +10,6 @@ public interface ICustomerRepository {
     List<Customer> findByName(String name);
     List<Customer> findByCustomerTypeId(int customer_type_id);
     boolean save(Customer customer);
-    boolean update(int id, Customer customer);
+    boolean update(Customer customer);
     boolean remove(int id);
 }

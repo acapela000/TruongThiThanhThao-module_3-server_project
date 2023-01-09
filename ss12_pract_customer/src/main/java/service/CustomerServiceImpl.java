@@ -35,8 +35,8 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public boolean update(int id, Customer customer) {
-        customerRepository.update(id, customer);
+    public boolean update(Customer customer) {
+        customerRepository.update(customer);
         return true;
     }
 

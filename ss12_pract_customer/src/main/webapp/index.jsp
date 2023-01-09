@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@
     <tr>
         <td>1</td>
         <td>
-            <a href="/customerMainPage">View the list</a>
+            <a href="/customerMainPage">View/Edit/Delete customer's information in the list</a>
         </td>
     </tr>
     <tr>
@@ -32,18 +33,18 @@
             <a href="/customerMainPage?action=create">Create new customer</a>
         </td>
     </tr>
-    <tr>
-        <td>3</td>
-        <td>
-            <a href="/customerMainPage?action=edit">Edit customer's information</a>
-        </td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>
-            <a href="/customerMainPage">Delete customer</a>
-        </td>
-    </tr>
+<%--    <tr>--%>
+<%--        <td>3</td>--%>
+<%--        <td>--%>
+<%--            <a href="/customerMainPage?action=edit">Edit customer's information</a>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
+<%--    <tr>--%>
+<%--        <td>4</td>--%>
+<%--        <td>--%>
+<%--            <a href="/customerMainPage">Delete customer</a>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
 
 </table>
 

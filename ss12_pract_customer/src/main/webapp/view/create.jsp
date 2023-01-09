@@ -26,17 +26,16 @@
     <span><a href="/customerMainPage?action=create"></a>${msg}</span>
 <%--    ${msg} = ${requestScope['msg']} chỗ span--%>
 </c:if>
-
 <form action="/customerMainPage?action=create" method="post">
     <fieldset class="border p-2">
         <legend class="float-none w-auto">New customer's information</legend>
         <table class="table table-info">
-            <tr>
-                <td>Id:</td>
-                <td>
-                    <input type="text" value="1" name="id">
-                </td>
-            </tr>
+<%--            <tr>--%>
+<%--                <td>Id:</td>--%>
+<%--                <td>--%>
+<%--                    <input type="text" value="1" name="id">--%>
+<%--                </td>--%>
+<%--            </tr>--%>
             <tr>
                 <td>Customer_type_id:</td>
                 <td>

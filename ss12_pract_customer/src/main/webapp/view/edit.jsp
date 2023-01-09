@@ -23,11 +23,13 @@
 <h1>==== Update customer's information ====</h1>
 
 <c:if test="${requestScope['msg'] != null}">
-    <span><a href="/customerMainPage?action=edit"></a>${msg}</span>
+    <span><a href="/customerMainPage?action=edit&id=${requestScope['customerEdit'].getId()}"></a>${msg}</span>
     <%--    ${msg} = ${requestScope['msg']} chỗ span--%>
 </c:if>
 
-<form action="/customerMainPage?action=edit" method="post">
+<%--${customerEdit.id} = ${requestScope['customerEdit'].getId()}--%>
+
+<form action="/customerMainPage?action=edit&id=${customerEdit.id}" method="post">
     <fieldset class="border p-2">
         <legend class="float-none w-auto">Customer's information</legend>
         <table class="table table-info">
@@ -52,7 +54,7 @@
             <tr>
                 <td>Gender:</td>
                 <td>
-                    <input type="text" value="${requestScope['customerEdit'].getGender()}" name="gender">
+                    <input type="text" value="${requestScope['customerEdit'].isGender()}" name="gender">
                 </td>
             </tr>
             <tr>

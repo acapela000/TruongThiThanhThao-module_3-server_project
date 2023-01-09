@@ -5,65 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ebd8575-8f03-48b3-a18e-3a8b61fe0e9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ss10_exercise_1_customer_list/.idea/ss10_exercise_1_customer_list.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss11_practice/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/FilterUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/CustomerRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ICustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/find.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12_pract_customer.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/config/FilterUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/repository/EmployeeRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/repository/IEmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/service/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/service/IEmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/view/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/view/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_practice_jdbc/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_student_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/7.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/build/classes/java/main/controller/StudentServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/build/classes/java/main/model/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/build/libs/demo-paging-sorting-jsp-servlet-5-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/src/main/java/controller/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/src/main/java/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-paging-sorting-jsp-servlet-5/src/main/webapp/test-paging-sorting.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bootstrap5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bootstrap5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bulma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.bulma.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/jquery-3.5.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11_practice/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11_practice/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11_practice/.idea/gradle.xml" beforeDir="false" />
@@ -91,6 +107,17 @@
       <change beforePath="$PROJECT_DIR$/../ss12_exercise/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_exercise/src/main/java/controller/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss12_exercise/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_exercise/src/main/java/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss12_exercise/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_exercise/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CustomerRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss13_exercise_1/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_exercise_1/src/main/java/controller/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss13_exercise_1/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_exercise_1/src/main/java/repository/UserRepository.java" afterDir="false" />
     </list>
@@ -146,6 +173,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\bootcamp\module_3\ss10_Servlet\ss12_pract_customer\src\main\webapp" />
       <recent name="D:\bootcamp\module_3\ss10_Servlet\ss12_pract_customer\src\main\webapp\view" />
     </key>
   </component>
@@ -246,7 +274,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673095880622</updated>
-      <workItem from="1673095881943" duration="25474000" />
+      <workItem from="1673095881943" duration="45027000" />
     </task>
     <servers />
   </component>
@@ -266,16 +294,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

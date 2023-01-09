@@ -23,26 +23,26 @@ public class CustomerServlet extends HttpServlet {
 
         switch (action) {
             case "create":
-                showCreateForm(request,response);
+                showCreateForm(request, response);
                 break;
             case "edit":
-                showEditForm(request,response);
+                showEditForm(request, response);
                 break;
             case "delete":
-                break;
+//                showDeleteForm(request,response);
             case "find":
                 break;
             case "view":
                 break;
             default:
-                showList(request,response);
+                showList(request, response);
         }
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/create.jsp");
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -58,12 +58,14 @@ public class CustomerServlet extends HttpServlet {
         if (customer == null) {
             requestDispatcher = request.getRequestDispatcher("view/error.jsp");
         } else {
-            request.setAttribute("customerEdit",customer);
+            request.setAttribute("customerEdit", customer);
             requestDispatcher = request.getRequestDispatcher("view/edit.jsp");
         }
 
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -71,13 +73,34 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
+//    private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
+//        int id = Integer.parseInt(request.getParameter("id"));
+//        Customer customer = customerService.findById(id);
+//        RequestDispatcher requestDispatcher;
+//
+//        if (customer == null) {
+//            requestDispatcher = request.getRequestDispatcher("view/error.jsp");
+//        } else {
+//            requestDispatcher = request.getRequestDispatcher("view/delete.jsp");
+//            request.setAttribute("customerDelete",customer);
+//        }
+//
+//        try {
+//            requestDispatcher.forward(request,response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     private void showList(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customerList = customerService.findAll();
-        request.setAttribute("customerList",customerList);
+        request.setAttribute("customerList", customerList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/list.jsp");
 
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -93,12 +116,13 @@ public class CustomerServlet extends HttpServlet {
 
         switch (action) {
             case "create":
-                createCustomer(request,response);
+                createCustomer(request, response);
                 break;
             case "edit":
-                updateCustomer(request,response);
+                updateCustomer(request, response);
                 break;
             case "delete":
+                deleteCustomer(request,response);
                 break;
             default:
         }
@@ -106,7 +130,7 @@ public class CustomerServlet extends HttpServlet {
 
     private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
         //id, customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address
-        int id = Integer.parseInt(request.getParameter("id"));
+        //int id = Integer.parseInt(request.getParameter("id"));
         int customer_type_id = Integer.parseInt(request.getParameter("customer_type_id"));
         String name = request.getParameter("name");
         String date_of_birth = request.getParameter("date_of_birth");
@@ -115,8 +139,9 @@ public class CustomerServlet extends HttpServlet {
         String phone_number = request.getParameter("phone_number");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        Customer customer = new Customer(id, customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address);
-        customerService.save(customer);
+        Customer customer = new Customer(customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address);
+        //customerService.save(customer);//do id tự động tăng nên ko truyền tham số id khi tạo đối tượng mới
+
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/create.jsp");
         String msg;
         if (customerService.save(customer)) {
@@ -124,10 +149,10 @@ public class CustomerServlet extends HttpServlet {
         } else {
             msg = "Failed to create new customer!";
         }
-        request.setAttribute("msg",msg);
+        request.setAttribute("msg", msg);
 
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -145,13 +170,13 @@ public class CustomerServlet extends HttpServlet {
         String phone_number = request.getParameter("phone_number");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        Customer customer =  customerService.findById(id);
+        Customer customer = customerService.findById(id);
         String msg;
+        request.setAttribute("customerEdit", customer);
         RequestDispatcher requestDispatcher;
         if (customer == null) {
             requestDispatcher = request.getRequestDispatcher("view/error.jsp");
         } else {
-            request.setAttribute("customerEdit", customer);
             customer.setCustomer_type_id(customer_type_id);
             customer.setName(name);
             customer.setDate_of_birth(date_of_birth);
@@ -160,8 +185,8 @@ public class CustomerServlet extends HttpServlet {
             customer.setPhone_number(phone_number);
             customer.setEmail(email);
             customer.setAddress(address);
-            customerService.update(id,customer);
-            if (customerService.update(id,customer)) {
+            customerService.update(customer);
+            if (customerService.update(customer)) {
                 msg = "Update customer's information successfully!";
             } else {
                 msg = "Failed to customer's information!";
@@ -170,7 +195,7 @@ public class CustomerServlet extends HttpServlet {
             requestDispatcher = request.getRequestDispatcher("view/edit.jsp");
         }
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -178,5 +203,36 @@ public class CustomerServlet extends HttpServlet {
         }
 
 
+    }
+
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        //List<Customer> customerList = customerService.findById(id);
+        customerService.remove(id);
+       List<Customer> customerList = customerService.findAll();
+       request.setAttribute("customerList",customerList);
+        RequestDispatcher requestDispatcher;
+
+        String msg;
+
+        if (customerList == null) {
+            requestDispatcher = request.getRequestDispatcher("view/error.jsp");
+        } else {
+            requestDispatcher = request.getRequestDispatcher("view/list.jsp");
+            request.setAttribute("customerDelete", customerList);
+            if (customerService.remove(id)) {
+                msg = "Delete successfully!";
+            } else msg = "Failed to delete!";
+            request.setAttribute("msg", msg);
+        }
+
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
