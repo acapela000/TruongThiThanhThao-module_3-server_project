@@ -1,4 +1,4 @@
-package repository;
+package repository.impl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,9 +8,10 @@ public class BaseRepository {// create_table
     private static String DB_NAME = "jdbc:mysql://localhost:3306/ss12_pract_customer";
     private static String USER = "root";
     private static String PASSWORD = "CodeGym@@@123";
+    private static Connection connection = null;
 
     public static Connection getConnectionDB() {
-        Connection connection = null;
+
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

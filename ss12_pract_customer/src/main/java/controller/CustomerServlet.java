@@ -1,7 +1,7 @@
 package controller;
 
 import model.Customer;
-import service.CustomerServiceImpl;
+import service.impl.CustomerServiceImpl;
 import service.ICustomerService;
 
 import java.io.*;
@@ -40,7 +40,7 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/create.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/create.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -56,10 +56,10 @@ public class CustomerServlet extends HttpServlet {
 
         RequestDispatcher requestDispatcher;
         if (customer == null) {
-            requestDispatcher = request.getRequestDispatcher("view/error.jsp");
+            requestDispatcher = request.getRequestDispatcher("view/customer/error.jsp");
         } else {
             request.setAttribute("customerEdit", customer);
-            requestDispatcher = request.getRequestDispatcher("view/edit.jsp");
+            requestDispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
         }
 
         try {
@@ -96,8 +96,9 @@ public class CustomerServlet extends HttpServlet {
 
     private void showList(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customerList = customerService.findAll();
+
         request.setAttribute("customerList", customerList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/list.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/list.jsp");
 
         try {
             requestDispatcher.forward(request, response);
@@ -141,8 +142,8 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
         Customer customer = new Customer(customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address);
         //customerService.save(customer);//do id tự động tăng nên ko truyền tham số id khi tạo đối tượng mới
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/create.jsp");
+        //request.setAttribute("customerCreate",customer); -> thừa
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/create.jsp");
         String msg;
         if (customerService.save(customer)) {
             msg = "Create new customer successfully!";
@@ -172,10 +173,10 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
         Customer customer = customerService.findById(id);
         String msg;
-        request.setAttribute("customerEdit", customer);
+//        request.setAttribute("customerEdit", customer);
         RequestDispatcher requestDispatcher;
         if (customer == null) {
-            requestDispatcher = request.getRequestDispatcher("view/error.jsp");
+            requestDispatcher = request.getRequestDispatcher("view/customer/error.jsp");
         } else {
             customer.setCustomer_type_id(customer_type_id);
             customer.setName(name);
@@ -192,7 +193,7 @@ public class CustomerServlet extends HttpServlet {
                 msg = "Failed to customer's information!";
             }
             request.setAttribute("msg", msg);
-            requestDispatcher = request.getRequestDispatcher("view/edit.jsp");
+            requestDispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
         }
         try {
             requestDispatcher.forward(request, response);
@@ -207,20 +208,18 @@ public class CustomerServlet extends HttpServlet {
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
 
-        int id = Integer.parseInt(request.getParameter("id"));
         //List<Customer> customerList = customerService.findById(id);
-        customerService.remove(id);
-       List<Customer> customerList = customerService.findAll();
-       request.setAttribute("customerList",customerList);
+        int id = Integer.parseInt(request.getParameter("id"));
+        List<Customer> customerList = customerService.findAll();
+        request.setAttribute("customerList",customerList);
         RequestDispatcher requestDispatcher;
 
         String msg;
 
         if (customerList == null) {
-            requestDispatcher = request.getRequestDispatcher("view/error.jsp");
+            requestDispatcher = request.getRequestDispatcher("view/customer/error.jsp");
         } else {
-            requestDispatcher = request.getRequestDispatcher("view/list.jsp");
-            request.setAttribute("customerDelete", customerList);
+            requestDispatcher = request.getRequestDispatcher("view/customer/list.jsp");
             if (customerService.remove(id)) {
                 msg = "Delete successfully!";
             } else msg = "Failed to delete!";
@@ -234,5 +233,11 @@ public class CustomerServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //CHUYỂN TRANG TRỰC TIẾP SAU KHI XÓA
+        //        try {
+//            response.sendRedirect("/customerAAA");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

@@ -21,56 +21,66 @@
 </head>
 
 <body>
-<h1 style="text-align: center">==== List of customer ====</h1>
+<h1 style="text-align: center">==== List of employee ====</h1>
 
 <c:if test="${requestScope['msg'] != null}">
     <span>
             ${requestScope['msg']}
     </span>
 </c:if>
-    <table class="table table-striped" id="customerTable">
+
+    <table class="table table-striped" id="employeeTable">
+<%--        PHẢI CÓ thead vs tbody THÌ MỚI PHÂN TRANG ĐC--%>
         <thead>
             <tr>
+
                 <th>Id</th>
-                <th>Customer_type_id</th>
                 <th>Name</th>
-                <th>Date_of_birth</th>
-                <th>Gender</th>
-                <th>Id_card</th>
-                <th>Phone_number</th>
+                <th>Date of birth</th>
+                <th>Id card</th>
+                <th>Salary</th>
+                <th>Phone number</th>
                 <th>Email</th>
                 <th>Address</th>
+                <th>Position Id</th>
+                <th>Education Degree Id</th>
+                <th>Divition Id</th>
+                <th>Username</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
         </thead>
 
         <tbody>
-            <c:forEach items="${customerList}" var="customer" varStatus="stt">
+            <c:forEach items="${employeeList}" var="employee" varStatus="stt">
                 <tr>
                     <td>${stt.count}</td>
-                        <%--                <td>${customer.id}</td>--%>
-                    <td>${customer.customer_type_id}</td>
-                    <td>${customer.name}</td>
-                    <td>${customer.date_of_birth}</td>
-                    <td>${customer.gender}</td>
-                    <td>${customer.id_card}</td>
-                    <td>${customer.phone_number}</td>
-                    <td>${customer.email}</td>
-                    <td>${customer.address}</td>
+                    <%--<td>${customer.id}</td> nếu ko đặt id tự độg tăng bên sql --%>
+<%--                    int id, String name, String dateOfBirth, int idCard, double salary, String phoneNumber, String email,--%>
+<%--                    String address, int positionId, int educationDegreeId, int divitionId, String username)--%>
+                    <td>${employee.name}</td>
+                    <td>${employee.dateOfBirth}</td>
+                    <td>${employee.idCard}</td>
+                    <td>${employee.salary}</td>
+                    <td>${employee.phoneNumber}</td>
+                    <td>${employee.email}</td>
+                    <td>${employee.address}</td>
+                    <td>${employee.positionId}</td>
+                    <td>${employee.educationDegreeId}</td>
+                    <td>${employee.divitionId}</td>
+                    <td>${employee.username}</td>
 
                     <td>
-                        <a href="/customerMainPage?action=edit&id=${customer.id}">Edit</a>
-                            <%--                    <a href="/customerMainPage?action=delete&id=${customer.id}">Delete</a>--%>
+                        <a href="/employeeMainPage?action=edit&id=${employee.id}">Edit</a>
+                       <%--<a href="/customerMainPage?action=delete&id=${customer.id}">Delete</a>--%>
                     </td>
-
                     <td>
                         <!-- Button trigger modal -->
-                        <button onclick="deleteCustomer('${customer.id}','${customer.name}')" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <button onclick="deleteEmployee('${employee.id}','${employee.name}')" type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#deleteEmployee">
                             DELETE
                         </button>
+                    <%--có khối div, có thể bỏ phía dưới--%>
                         <!-- Modal -->
-
                     </td>
                 </tr>
             </c:forEach>
@@ -82,7 +92,7 @@
 </p>
 
 <%--MODAL DELETE--%>
-<div class="modal fade" id="deleteCustomer" tabindex="-1" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="deleteEmployee" tabindex="-1" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -92,25 +102,22 @@
                         aria-label="Close"></button>
             </div>
 
-<%--            triển khai thẻ form để lấy action=delete--%>
-            <form action="/customerMainPage?action=delete" method="post">
+        <%-- triển khai thẻ form để lấy action=delete--%>
+            <form action="/employeeMainPage?action=delete" method="post">
             <div class="modal-body">
-
         <%--   HIỂN THỊ THÔNG TIN TRONG HỘP THOẠI DELETE--%>
                 <input hidden type="text" id="deleteId" name="id">
-                <span>You want delete Customer</span>
+                <span>You want delete Employee</span>
                 <span style="color:red;" id="deleteName"></span>
-    <%--    HIỂN THỊ THÔNG TIN TRONG HỘP THOẠI DELETE--%>
-
+        <%--  HIỂN THỊ THÔNG TIN TRONG HỘP THOẠI DELETE--%>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary" name="action" data-bs-dismiss="modal">Yes</button>
-                <button type="submit" class="btn btn-primary">No</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
             </div>
             </form>
-            <%--            triển khai thẻ form để lấy action=delete--%>
-
-        </div>l
+        <%--triển khai thẻ form để lấy action=delete--%>
+        </div>
     </div>
 </div>
 
@@ -120,20 +127,18 @@
 <script src="datatables/js/jquery.dataTables.min.js"></script>
 <script src="datatables/js/dataTables.bootstrap5.min.js"></script>
 <script>
-$(document).ready(function () {
-    $('#customerTable').dataTable( {
-        "dom": 'lrtip',
-        "lengthChange": false,
-        "pageLength": 3
-    } );
-});
+    $(document).ready(
+      function () {
+          $('#employeeTable').dataTable({
+              "dom": "lrtip","lengthChange": false, "pageLength": 5
+          });
+      });
 </script>
-
 </body>
 <script>
-    function deleteCustomer(id,name){
-        document.getElementById("deleteId").value = id;
-        document.getElementById("deleteName").innerText = name;
+    function deleteEmployee(id,name) {
+        document.getElementById('deleteId').value = id;
+        document.getElementById('deleteName').innerText = name;
     }
 </script>
 </html>

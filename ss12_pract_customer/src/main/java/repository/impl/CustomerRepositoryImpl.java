@@ -1,6 +1,7 @@
-package repository;
+package repository.impl;
 
 import model.Customer;
+import repository.ICustomerRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -75,7 +76,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         PreparedStatement preparedStatement = null;
         try {//id, customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address
             preparedStatement = connection.prepareStatement("insert into ss12_pract_customer (customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address)  values ( ?, ?, ?, ?, ?, ?, ?, ?);");
-            //preparedStatement.setInt(1,customer.getId());
+            //preparedStatement.setInt(1,customer.getId()); id tự động tăng
             preparedStatement.setInt(1,customer.getCustomer_type_id());
             preparedStatement.setString(2,customer.getName());
             preparedStatement.setString(3,customer.getDate_of_birth());
@@ -84,8 +85,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
             preparedStatement.setString(6,customer.getPhone_number());
             preparedStatement.setString(7,customer.getEmail());
             preparedStatement.setString(8,customer.getAddress());
-            preparedStatement.executeUpdate();
-            return true;
+            return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -115,14 +115,14 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
 
     @Override
     public boolean remove(int id) {
+        PreparedStatement preparedStatement = null;
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("delete from ss12_pract_customer where id = ?;");
+            preparedStatement = connection.prepareStatement("delete from ss12_pract_customer where id = ?;");
             preparedStatement.setInt(1,id);
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return true;
     }
 }

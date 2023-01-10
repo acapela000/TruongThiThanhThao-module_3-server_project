@@ -1,8 +1,10 @@
-package service;
+package service.impl;
 
 import model.Customer;
-import repository.CustomerRepositoryImpl;
+import repository.impl.CustomerRepositoryImpl;
 import repository.ICustomerRepository;
+import service.ICustomerService;
+
 import java.util.List;
 
 public class CustomerServiceImpl implements ICustomerService {
@@ -43,6 +45,6 @@ public class CustomerServiceImpl implements ICustomerService {
     @Override
     public boolean remove(int id) {
         customerRepository.remove(id);
-        return true;
+        return false;
     }
 }

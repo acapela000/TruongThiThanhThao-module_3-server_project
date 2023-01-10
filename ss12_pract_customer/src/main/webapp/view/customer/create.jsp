@@ -26,20 +26,27 @@
     <span><a href="/customerMainPage?action=create"></a>${msg}</span>
 <%--    ${msg} = ${requestScope['msg']} chỗ span--%>
 </c:if>
+
 <form action="/customerMainPage?action=create" method="post">
     <fieldset class="border p-2">
         <legend class="float-none w-auto">New customer's information</legend>
         <table class="table table-info">
-<%--            <tr>--%>
-<%--                <td>Id:</td>--%>
-<%--                <td>--%>
-<%--                    <input type="text" value="1" name="id">--%>
-<%--                </td>--%>
-<%--            </tr>--%>
             <tr>
                 <td>Customer_type_id:</td>
                 <td>
-                    <input type="text" value="1" name="customer_type_id">
+                    <input type="number" name="customer_type_id" value="1">
+<%--                    <select name="customer_type_id" id="customer_type_id">--%>
+<%--                        <c:if test="${customerCreate.customer_type_id == 1}">--%>
+<%--                            <option value="Diamond">Diamond</option>--%>
+<%--                        </c:if>--%>
+<%--                        <c:if test="${customerCreate.customer_type_id == 2}">--%>
+<%--                            <option value="Diamond">Diamond</option>--%>
+<%--                        </c:if>--%>
+<%--&lt;%&ndash;                        <option value="Platinium">Platinium</option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <option value="Gold">Gold</option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <option value="Silver">Silver</option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <option value="Member">Member</option>&ndash;%&gt;--%>
+<%--                    </select>--%>
                 </td>
             </tr>
             <tr>
@@ -51,13 +58,16 @@
             <tr>
                 <td>Date_of_birth:</td>
                 <td>
-                    <input type="text" value="0000-00-00" name="date_of_birth">
+                    <input type="date" value="0000-00-00" name="date_of_birth">
                 </td>
             </tr>
             <tr>
                 <td>Gender:</td>
                 <td>
-                    <input type="text" value="Male" name="gender">
+                    <input type="radio" id="Male" name="gender" value="false">
+                    <label for="Male">Male</label>
+                    <input type="radio" id="Female" name="gender" value="true">
+                    <label for="Female">Female</label>
                 </td>
             </tr>
             <tr>
