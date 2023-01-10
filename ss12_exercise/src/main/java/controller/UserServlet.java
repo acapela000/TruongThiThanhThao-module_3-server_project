@@ -133,7 +133,6 @@ public class UserServlet extends HttpServlet {
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
         int id=Integer.parseInt(request.getParameter("id"));
         userService.delete(id);
-        showList(request,response);
     }
 
     private void editUser(HttpServletRequest request, HttpServletResponse response) {
@@ -143,7 +142,6 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         User user = new User(id, name, email, country);
         userService.update(user);
-        showEdit(request, response);
     }
 
     private void createUser(HttpServletRequest request, HttpServletResponse response) {

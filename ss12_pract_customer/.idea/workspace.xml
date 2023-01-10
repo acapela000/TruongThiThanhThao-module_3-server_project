@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/model/Employee.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/repository/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/BaseRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/BaseRepositoryTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/EmployeeRepositoryImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/service/IEmployeeService.java" afterDir="false" />
@@ -17,6 +18,32 @@
       <change afterPath="$PROJECT_DIR$/src/main/webapp/view/employee/error.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/view/employee/find.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/view/employee/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/repository/EmployeeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/repository/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/service/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/service/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/view/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_pract_employee/ss12_pract_employee_sql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11_practice/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11_practice/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11_practice/.idea/gradle.xml" beforeDir="false" />
@@ -45,7 +72,7 @@
       <change beforePath="$PROJECT_DIR$/../ss12_exercise/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_exercise/src/main/webapp/view/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_pract_employee/src/main/java/repository/BaseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/CustomerRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
@@ -219,7 +246,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673095880622</updated>
-      <workItem from="1673095881943" duration="82819000" />
+      <workItem from="1673095881943" duration="83588000" />
     </task>
     <servers />
   </component>

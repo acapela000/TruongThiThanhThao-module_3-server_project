@@ -17,13 +17,13 @@
 <body>
 <h1>User</h1>
 <p><a href="/user?action=create">Create user</a></p>
-<form method="get" action="/user?action=find">
-    <div>
-        <p>Find User</p>
-        <input type="text" name="country">
-        <button type="submit" value="find" name="action">Find</button>
-    </div>
-</form>
+<%--<form method="get" action="/user?action=find">--%>
+<%--    <div>--%>
+<%--        <p>Find User</p>--%>
+<%--        <input type="text" name="country">--%>
+<%--        <button type="submit" value="find" name="action">Find</button>--%>
+<%--    </div>--%>
+<%--</form>--%>
 <table class="table table-row-cell">
     <tr>
         <th>Id</th>
@@ -34,7 +34,7 @@
         <th>Delete</th>
     </tr>
     <c:forEach items="${list}" var="user">
-        <tr>
+        <tr>m
             <td>${user.id}</td>
             <td>${user.name}</td>
             <td>${user.email}</td>

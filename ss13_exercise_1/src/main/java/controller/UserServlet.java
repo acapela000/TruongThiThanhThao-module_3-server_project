@@ -60,26 +60,13 @@ public class UserServlet extends HttpServlet {
             request.setAttribute("user", user);
             dispatcher = request.getRequestDispatcher("user/delete.jsp");
         }
+
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-
-    }
-
-    private void showFind(HttpServletRequest request, HttpServletResponse response) {
-        String country=request.getParameter("country");
-        List<User> user= userService.findByCountry(country);
-        request.setAttribute("user", user);
-        try {
-            request.getRequestDispatcher("/view/find.jsp").forward(request, response);
-        } catch (ServletException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
 
     }
@@ -145,17 +132,18 @@ public class UserServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                createUser(request, response);
+                createUser(request,response);
                 break;
             case "edit":
-                editUser(request, response);
+                editUser(request,response);
                 break;
             case "delete":
                 deleteUser(request,response);
             case "find":
-                showFind(request, response);
+                findByCountry(request,response);
                 break;
-
+            default:
+                showList(request,response);
         }
     }
 
@@ -179,6 +167,22 @@ public class UserServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void findByCountry(HttpServletRequest request, HttpServletResponse response) {
+        String country=request.getParameter("country");
+        List<User> user= userService.findByCountry(country);
+        request.setAttribute("user", user);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/find.jsp");
+
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void createUser(HttpServletRequest request, HttpServletResponse response) {
